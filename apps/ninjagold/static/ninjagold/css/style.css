@@ -1,0 +1,44 @@
+*{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  margin: 20px;
+  height: 500px;
+  width: 1000px;
+}
+
+#activity_log{
+  padding: 5px;
+  padding-left: 0;
+  height: 400px;
+  width: auto;
+  height: 200px;
+  border: 1px solid black;
+  overflow: scroll;
+  position: relative;
+  bottom: 0;
+}
+
+.gold {
+  height: 75px;
+  width: 200px;
+  padding: 5px;
+  margin: 10px 17px;
+  display: inline-block;
+  border: 1px solid black;
+}
+  .gold form{
+    margin-left: 60px;
+    margin-top: 10px;
+  }
+
+.lost_money{
+  color: red;
+}
+
+.gained_money{
+  color: green;
+}

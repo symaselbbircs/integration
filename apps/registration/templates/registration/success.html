@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>You did it!</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'registration/css/index_style.css' %}" media="screen" title="no title">
+  </head>
+  <body>
+    <h1>You did the thing! Welcome, {{ request.session.first_name }}!</h1>
+    {% if messages %}
+      <div class="{{messages.0.tags}}">
+        <ul class="messages">
+          {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    <div id="activities">
+      <ul>
+        Here are some activities to do:
+        <li><a href="http://localhost:8000/courses/">Look at courses</a></li>
+        <li><a href="http://localhost:8000/randomword/">Make random words</a></li>
+        <li><a href="http://localhost:8000/getgold/">Ninja Gold Game</a></li>
+        <li><a href="http://localhost:8000/ninja/">Look at some TMNT(if you know the tricks)</a></li>
+      </ul>
+      <a href="{% url 'logout' %}">Logout<a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+#submit_box {
+  margin: 50px;
+  height: 200px;
+  width: 400px;
+  border: 1px solid black;
+}
+
+#name_field{
+  width: 195px;
+}
+
+#submit_titles{
+  display: inline-block;
+}
+
+#user_info {
+  width: 150px;
+  margin-left: 35px;
+  display: inline-block;
+  text-align: right;
+}
+
+.mytable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  .mytable  td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+  .mytable  tr:nth-child(even) {
+        background-color: #dddddd;
+    }

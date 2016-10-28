@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- <meta charset="utf-8"> -->
+      <title>Add a student to all bootcamp courses</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'courses/css/style.css' %}" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+      <div class="submit_box">
+        <h1>Add a new course</h1>
+        <div id="submit_titles">
+          <p>Name: </p>
+        </div>
+          <form id="user_info" action="{% url 'add_course' %}" method="post">
+            {% csrf_token %}
+              <input id="name_field" type="text" name="name"><br>
+          </form>
+          <p>Description: <textarea name="description" form="user_info" rows="4" cols="30"></textarea></p>
+          <input form="user_info" type="submit" value="create course">
+      </div>
+      <div class="courses">
+        <h1>Courses</h1><hr>
+        {% if data %}
+          <table class="mytable">
+            <tr>
+              <th>Course Name</th>
+              <th>Description</th>
+              <th>Date Added</th>
+              <th>Actions</th>
+            </tr>
+            {% for row in data %}
+              <tr>
+                  <td>{{row.course.name}}</td>
+                  <td>{{row.description}}</td>
+                  <td>{{row.course.created_at}}</td>
+                  <td><a href="{% url 'delete_course' course_id=row.course.id %}">Remove</a></td>
+              </tr>
+            {% endfor %}
+          </table>
+        {% else %}
+          <h4>No Courses!</h4>
+        {% endif %}
+      </div>
+    </body>
+</html>

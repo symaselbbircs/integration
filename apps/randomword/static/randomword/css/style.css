@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 5px;
+}
+
+.info_box {
+  margin-left: 450px;
+  padding: 2px;
+  width: 365px;
+  height: 48px;
+  border: 1px solid black;
+}
+
+#data {
+  width: 185px;
+  height: 25px;
+  margin-top: 20px;
+  margin-left: 525px;
+}
+
+#page_info{
+  margin-top: 100px
+}

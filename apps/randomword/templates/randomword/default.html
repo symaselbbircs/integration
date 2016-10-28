@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Default page</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'timedisplay/css/style.css' %}" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="info_box">
+      <h1>This is the default display{{request.session.count}}</h1>
+    </div><br><br>
+    <div class="info_box">
+      <p>Please go <a href="{% url 'word_page' %}">here</a> to generate words!</p>
+    </div>
+  </body>
+</html>
